@@ -1,6 +1,8 @@
 package pckMD5;
 
 {$R *.res}
+{$R *.otares}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
@@ -12,8 +14,8 @@ package pckMD5;
 {$LONGSTRINGS ON}
 {$OPENSTRINGS ON}
 {$OPTIMIZATION OFF}
-{$OVERFLOWCHECKS OFF}
-{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
 {$REFERENCEINFO ON}
 {$SAFEDIVIDE OFF}
 {$STACKFRAMES ON}
@@ -23,6 +25,8 @@ package pckMD5;
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
 {$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'SWDelphi - User Control MD5SUM'}
 {$IMPLICITBUILD OFF}
 
@@ -32,4 +36,4 @@ requires
 contains
   UCmd5 in '..\..\Source\Base\UCmd5.pas';
 
-end.
+End.

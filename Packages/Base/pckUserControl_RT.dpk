@@ -1,7 +1,7 @@
 package pckUserControl_RT;
 
-{$I UserControl.inc}
 {$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
@@ -13,8 +13,8 @@ package pckUserControl_RT;
 {$LONGSTRINGS ON}
 {$OPENSTRINGS ON}
 {$OPTIMIZATION OFF}
-{$OVERFLOWCHECKS OFF}
-{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
 {$REFERENCEINFO ON}
 {$SAFEDIVIDE OFF}
 {$STACKFRAMES ON}
@@ -24,6 +24,8 @@ package pckUserControl_RT;
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
 {$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'SWDelphi - User Control RT'}
 {$IMPLICITBUILD OFF}
 
@@ -34,15 +36,7 @@ requires
   vclactnband,
   vcldb,
   VclSmp,
-  {$IFDEF DELPHI2006_UP}
-    IndyProtocols;
-  {$ELSE}
-	{$IFDEF DELPHI7}
-	  IndyProtocols70;
-	{$ELSE}
-	  IndyProtocols;
-	{$ENDIF}
-  {$ENDIF}
+  IndyProtocols;
 
 contains
   TrocaSenha_U in '..\..\source\Base\TrocaSenha_U.pas',
@@ -68,4 +62,4 @@ contains
   UCALSMTPClient in '..\..\source\Base\UCALSMTPClient.pas',
   IncPerfil_U in '..\..\source\Base\IncPerfil_U.pas';
 
-end.
+End.

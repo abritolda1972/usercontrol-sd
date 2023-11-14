@@ -1,6 +1,8 @@
 package pckHistorico;
 
 {$R *.res}
+{$R *.otares}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
@@ -12,8 +14,8 @@ package pckHistorico;
 {$LONGSTRINGS ON}
 {$OPENSTRINGS ON}
 {$OPTIMIZATION OFF}
-{$OVERFLOWCHECKS OFF}
-{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
 {$REFERENCEINFO ON}
 {$SAFEDIVIDE OFF}
 {$STACKFRAMES ON}
@@ -23,6 +25,8 @@ package pckHistorico;
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
 {$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'SWDelphi - User Control Historico'}
 {$IMPLICITBUILD ON}
 
@@ -35,4 +39,4 @@ contains
   UCHist_Type in '..\..\Source\Historico\UCHist_Type.pas',
   UCHist_Form in '..\..\Source\Historico\UCHist_Form.pas';
 
-end.
+End.

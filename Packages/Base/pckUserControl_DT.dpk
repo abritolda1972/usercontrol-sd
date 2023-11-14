@@ -1,8 +1,8 @@
 package pckUserControl_DT;
 
-{$I UserControl.inc}
 {$R *.res}
-//{$R '..\..\Source\Base\UCReg.dcr'}
+{$R *.otares}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
@@ -13,34 +13,32 @@ package pckUserControl_DT;
 {$LOCALSYMBOLS ON}
 {$LONGSTRINGS ON}
 {$OPENSTRINGS ON}
-{$OPTIMIZATION ON}
-{$OVERFLOWCHECKS OFF}
-{$RANGECHECKS OFF}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
 {$REFERENCEINFO ON}
 {$SAFEDIVIDE OFF}
-{$STACKFRAMES OFF}
+{$STACKFRAMES ON}
 {$TYPEDADDRESS OFF}
 {$VARSTRINGCHECKS ON}
 {$WRITEABLECONST OFF}
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'SWDelphi - User Control'}
 {$IMPLICITBUILD ON}
 
-requires
+Requires
   designide,
-  {$IFDEF DELPHI12_UP} 
-    vclimg,
-  {$ELSE} 
-    vcljpg,
-  {$ENDIF}  
+  vclimg,
   pckUserControl_RT;
 
-contains
+Contains
   UCReg in '..\..\Source\Base\UCReg.pas',
   UCObjSel_U in '..\..\Source\Base\UCObjSel_U.pas',
   UCAbout in '..\..\Source\Base\UCAbout.pas',
   UCIdle in '..\..\Source\Base\UCIdle.pas',
   UCEditorForm_U in '..\..\Source\Base\UCEditorForm_U.pas';
 
-end.
+End.

@@ -1,6 +1,8 @@
 package pckUCDataConnector;
 
 {$R *.res}
+{$R *.otares}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
@@ -12,8 +14,8 @@ package pckUCDataConnector;
 {$LONGSTRINGS ON}
 {$OPENSTRINGS ON}
 {$OPTIMIZATION OFF}
-{$OVERFLOWCHECKS OFF}
-{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
 {$REFERENCEINFO ON}
 {$SAFEDIVIDE OFF}
 {$STACKFRAMES ON}
@@ -23,6 +25,8 @@ package pckUCDataConnector;
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
 {$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'SWDelphi - User Control DataConnector'}
 {$IMPLICITBUILD OFF}
 
@@ -33,4 +37,4 @@ requires
 contains
   UCDataConnector in '..\..\Source\Base\UCDataConnector.pas';
 
-end.
+End.
