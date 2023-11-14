@@ -84,7 +84,6 @@ uses
   Forms,
   Graphics,
   Messages,
-  Spin,
   StdCtrls,
   SysUtils,
   {$IFDEF FPC}

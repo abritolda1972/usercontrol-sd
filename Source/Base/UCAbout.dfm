@@ -11,11 +11,9 @@ object UCAboutForm: TUCAboutForm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poMainFormCenter
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlFundo: TPanel
     Left = 0
@@ -54,9 +52,9 @@ object UCAboutForm: TUCAboutForm
           474
           104)
         object lblVersao: TLabel
-          Left = 395
+          Left = 396
           Top = 81
-          Width = 72
+          Width = 71
           Height = 23
           Alignment = taRightJustify
           Anchors = [akTop, akRight]
@@ -325,8 +323,9 @@ object UCAboutForm: TUCAboutForm
           Top = 360
           Width = 75
           Height = 25
-          TabOrder = 0
           Kind = bkOK
+          NumGlyphs = 2
+          TabOrder = 0
         end
         object Memo1: TMemo
           Left = 17

@@ -74,7 +74,7 @@ interface
 uses
   Variants, Buttons, Classes,
   Controls, DB, DBCtrls, Dialogs, ExtCtrls,
-  Forms, Graphics, Messages, Spin, StdCtrls,
+  Forms, Graphics, Messages, StdCtrls,
   SysUtils,
   {$IFDEF FPC}
   {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}

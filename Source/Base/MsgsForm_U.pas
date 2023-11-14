@@ -85,7 +85,6 @@ uses
   Forms,
   Graphics,
   Messages,
-  Spin,
   StdCtrls,
   SysUtils,
   {$IFDEF FPC}
@@ -96,12 +95,12 @@ uses
 
   ImgList,
 
-  // Delphi XE 8 ou superior
-  {$IFDEF DELPHI22_UP}
-    System.ImageList,
-  {$ENDIF}
+//  // Delphi XE 8 ou superior
+//  {$IFDEF DELPHI22_UP}
+//    System.ImageList,
+//  {$ENDIF}
 
-  ToolWin;
+  ToolWin, System.ImageList;
 
 type
   TPointMsg = ^PPointMsg;

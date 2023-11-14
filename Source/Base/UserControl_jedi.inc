@@ -1067,6 +1067,51 @@
       {$UNDEF UNKNOWN_COMPILER_VERSION}
     {$ENDIF VER330}
 
+    {$IFDEF VER340} // RAD Studio 10.4
+      {$DEFINE BDS}
+      {$DEFINE BDS20}
+      {$DEFINE COMPILER26}
+      {$IFDEF BCB}
+        {$DEFINE BCB26}
+      {$ELSE}
+        {$DEFINE DELPHI26}
+        {$DEFINE DELPHIX_RIO}  // synonym to DELPHI26
+        {$DEFINE DELPHICOMPILER26}
+      {$ENDIF BCB}
+      {$DEFINE RTL330_UP}
+      {$UNDEF UNKNOWN_COMPILER_VERSION}
+    {$ENDIF VER340}
+
+    {$IFDEF VER350} // RAD Studio 11
+      {$DEFINE BDS}
+      {$DEFINE BDS20}
+      {$DEFINE COMPILER26}
+      {$IFDEF BCB}
+        {$DEFINE BCB26}
+      {$ELSE}
+        {$DEFINE DELPHI26}
+        {$DEFINE DELPHIX_RIO}  // synonym to DELPHI26
+        {$DEFINE DELPHICOMPILER26}
+      {$ENDIF BCB}
+      {$DEFINE RTL330_UP}
+      {$UNDEF UNKNOWN_COMPILER_VERSION}
+    {$ENDIF VER350}	
+
+    {$IFDEF VER360} // RAD Studio 12
+      {$DEFINE BDS}
+      {$DEFINE BDS20}
+      {$DEFINE COMPILER26}
+      {$IFDEF BCB}
+        {$DEFINE BCB26}
+      {$ELSE}
+        {$DEFINE DELPHI26}
+        {$DEFINE DELPHIX_RIO}  // synonym to DELPHI26
+        {$DEFINE DELPHICOMPILER26}
+      {$ENDIF BCB}
+      {$DEFINE RTL330_UP}
+      {$UNDEF UNKNOWN_COMPILER_VERSION}
+    {$ENDIF VER360}
+	
     {$IFDEF UNKNOWN_COMPILER_VERSION} // adjust for newer version (always use latest version)
       {$DEFINE BDS}
       {$DEFINE BDS20}

@@ -84,7 +84,6 @@ uses
   Forms,
   Graphics,
   Messages,
-  Spin,
   StdCtrls,
   SysUtils,
   {$IFDEF FPC}
@@ -98,13 +97,12 @@ uses
   
   {$IFDEF DELPHIXE8_UP}
   System.UITypes,
-  ImageList,
   {$ENDIF}
 
   IncUser_U,
   SenhaForm_U,
   UcBase,
-  UserPermis_U;
+  UserPermis_U, System.ImageList;
 
 type
   TUCFrame_User = class(TFrame)

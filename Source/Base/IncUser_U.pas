@@ -87,7 +87,6 @@ uses
   Forms,
   Graphics,
   Messages,
-  Spin,
   StdCtrls,
   SysUtils,
   {$IFDEF FPC}
@@ -104,7 +103,7 @@ uses
   System.UITypes,
   {$ENDIF}
 
-  UCBase;
+  UCBase, Vcl.Samples.Spin;
 
 type
   TfrmIncluirUsuario = class(TForm)

@@ -11,11 +11,9 @@ object UCEditorForm: TUCEditorForm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poMainFormCenter
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlBotoes: TPanel
     Left = 0
@@ -30,8 +28,9 @@ object UCEditorForm: TUCEditorForm
       Top = 6
       Width = 100
       Height = 30
-      TabOrder = 0
       Kind = bkOK
+      NumGlyphs = 2
+      TabOrder = 0
     end
     object btnClose: TBitBtn
       Left = 300
@@ -39,8 +38,6 @@ object UCEditorForm: TUCEditorForm
       Width = 100
       Height = 30
       Caption = '&Fechar'
-      TabOrder = 1
-      OnClick = btnCloseClick
       Glyph.Data = {
         B6020000424DB602000000000000B60100002800000010000000100000000100
         08000000000000010000120B0000120B0000600000006000000000000000FFFF
@@ -64,6 +61,8 @@ object UCEditorForm: TUCEditorForm
         254307474D4B4D3F4502020245302A2B292D07474D4B4D3F4502020245352E2C
         2E3207474D4B4D3F450202024545332F343107464A494A3F450202020202453C
         3744074545454545450202020202020245450702020202020202}
+      TabOrder = 1
+      OnClick = btnCloseClick
     end
   end
   object Panel2: TPanel
@@ -94,7 +93,7 @@ object UCEditorForm: TUCEditorForm
       Left = 220
       Top = 0
       Width = 374
-      Height = 73
+      Height = 80
       Align = alRight
       AutoSize = True
       Picture.Data = {
@@ -363,6 +362,7 @@ object UCEditorForm: TUCEditorForm
         06CF6FB4C7C7FE3D5249F0ABC4CF6EB18D0C295E770BA8B27FF1EAFA2B637F74
         FE546C6FEE9FCA8B01F355CFC1EF15CBB443A2F18C906E62EBFF007D515F4D5B
         A36F3F29E9E945689684B3FFD9}
+      ExplicitHeight = 73
     end
   end
   object pnlCentro: TPanel
@@ -498,7 +498,6 @@ object UCEditorForm: TUCEditorForm
             Width = 220
             Height = 21
             Style = csDropDownList
-            ItemHeight = 13
             TabOrder = 7
             Items.Strings = (
               'cPadrao'
@@ -510,7 +509,6 @@ object UCEditorForm: TUCEditorForm
             Width = 220
             Height = 21
             Style = csDropDownList
-            ItemHeight = 13
             TabOrder = 8
             Items.Strings = (
               'lmActive'
@@ -804,7 +802,6 @@ object UCEditorForm: TUCEditorForm
           Width = 220
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
           TabOrder = 0
           OnChange = ComboRightsChange
         end
@@ -814,7 +811,6 @@ object UCEditorForm: TUCEditorForm
           Width = 220
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
           TabOrder = 1
           OnChange = ComboRightsChange
           OnClick = ComboRightsChange
@@ -825,7 +821,6 @@ object UCEditorForm: TUCEditorForm
           Width = 220
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
           TabOrder = 2
           OnChange = ComboRightsChange
         end
@@ -835,7 +830,6 @@ object UCEditorForm: TUCEditorForm
           Width = 220
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
           TabOrder = 3
           OnChange = ComboRightsChange
         end
@@ -863,7 +857,6 @@ object UCEditorForm: TUCEditorForm
           Width = 220
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
           TabOrder = 0
           OnChange = ComboActionMenuItem
           OnClick = ComboActionMenuItem
@@ -874,7 +867,6 @@ object UCEditorForm: TUCEditorForm
           Width = 220
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
           TabOrder = 1
           OnChange = ComboActionMenuItem
           OnClick = ComboActionMenuItem
@@ -923,7 +915,6 @@ object UCEditorForm: TUCEditorForm
           Width = 220
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
           TabOrder = 0
           Visible = False
           OnChange = ComboActionMenuItem
@@ -935,7 +926,6 @@ object UCEditorForm: TUCEditorForm
           Width = 220
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
           TabOrder = 1
           Visible = False
           OnChange = ComboActionMenuItem
@@ -983,7 +973,6 @@ object UCEditorForm: TUCEditorForm
           Width = 220
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
           TabOrder = 0
           OnChange = ComboActionMenuItem
           OnClick = ComboActionMenuItem
@@ -994,7 +983,6 @@ object UCEditorForm: TUCEditorForm
           Width = 220
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
           TabOrder = 1
           OnChange = ComboActionMenuItem
           OnClick = ComboActionMenuItem
@@ -1222,7 +1210,6 @@ object UCEditorForm: TUCEditorForm
           Width = 220
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
           TabOrder = 3
           Visible = False
           OnChange = ComboActionMenuItem
@@ -1234,7 +1221,6 @@ object UCEditorForm: TUCEditorForm
           Width = 220
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
           TabOrder = 4
           Visible = False
           OnChange = ComboActionMenuItem
@@ -1478,7 +1464,6 @@ object UCEditorForm: TUCEditorForm
           Width = 201
           Height = 21
           Style = csDropDownList
-          ItemHeight = 13
           ItemIndex = 0
           TabOrder = 2
           Text = 'lnNone'

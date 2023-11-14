@@ -1,4 +1,4 @@
-{ **************************************************************************** }
+﻿{ **************************************************************************** }
 { Projeto: Componentes User Control ShowDelphi Edition                         }
 { Biblioteca multiplataforma de componentes Delphi para o controle de usuários }
 {                                                                              }
@@ -77,7 +77,6 @@ uses
   ActnCtrls,
   ActnMan,
   ActnMenus,
-  jpeg,
   {$ENDIF}
 
   ActnList,
@@ -86,9 +85,9 @@ uses
   ComCtrls,
   Contnrs,
 
-  {$IFDEF DELPHIXE3_UP}
-  system.Actions,
-  {$ENDIF}
+//  {$IFDEF DELPHIXE3_UP}
+//  system.Actions,
+//  {$ENDIF}
 
   Controls,
   Dialogs,
@@ -97,10 +96,9 @@ uses
   Forms,
   Graphics,
   Menus,
-  Spin,
   StdCtrls,
   ToolWin,
-  UCBase;
+  UCBase, System.Actions, Vcl.Samples.Spin, Vcl.Imaging.jpeg;
 
 type
   TUCEditorForm = class(TForm)

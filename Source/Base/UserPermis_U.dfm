@@ -1,9 +1,9 @@
 object UserPermis: TUserPermis
   Left = 255
   Top = 154
-  Width = 597
-  Height = 560
   Caption = 'Seguran'#231'a'
+  ClientHeight = 521
+  ClientWidth = 581
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,22 +11,21 @@ object UserPermis: TUserPermis
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   FormStyle = fsStayOnTop
-  OldCreateOrder = False
   Position = poDesktopCenter
   OnClose = FormClose
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 589
+    Width = 581
     Height = 35
     Align = alTop
     BevelOuter = bvNone
     Color = clWhite
     TabOrder = 0
+    ExplicitWidth = 589
     object LbDescricao: TLabel
       Left = 44
       Top = 12
@@ -164,21 +163,21 @@ object UserPermis: TUserPermis
     end
   end
   object Panel3: TPanel
-    Left = 488
+    Left = 480
     Top = 35
     Width = 101
-    Height = 491
+    Height = 486
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitLeft = 488
+    ExplicitHeight = 491
     object BtLibera: TBitBtn
       Left = 8
       Top = 24
       Width = 82
       Height = 25
       Caption = '&Liberar'
-      TabOrder = 0
-      OnClick = BtLiberaClick
       Glyph.Data = {
         36060000424D3606000000000000360000002800000020000000100000000100
         18000000000000060000120B0000120B00000000000000000000C8D0D4C8D0D4
@@ -231,6 +230,8 @@ object UserPermis: TUserPermis
         D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C2C8CBBDC2C4B5B5B5B5
         B5B5B5B5B5BDC2C4C2C8CBC8D0D4C8D0D4C8D0D4C8D0D4C8D0D4}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = BtLiberaClick
     end
     object BtBloqueia: TBitBtn
       Left = 8
@@ -238,8 +239,6 @@ object UserPermis: TUserPermis
       Width = 82
       Height = 25
       Caption = '&Bloquear'
-      TabOrder = 1
-      OnClick = BtBloqueiaClick
       Glyph.Data = {
         36060000424D3606000000000000360000002800000020000000100000000100
         18000000000000060000120B0000120B00000000000000000000C8D0D4C8D0D4
@@ -292,6 +291,8 @@ object UserPermis: TUserPermis
         D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8
         D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = BtBloqueiaClick
     end
     object BtGrava: TBitBtn
       Left = 8
@@ -299,8 +300,6 @@ object UserPermis: TUserPermis
       Width = 82
       Height = 25
       Caption = '&Gravar'
-      TabOrder = 2
-      OnClick = BtGravaClick
       Glyph.Data = {
         36060000424D3606000000000000360000002800000020000000100000000100
         18000000000000060000120B0000120B00000000000000000000FF00FFFF00FF
@@ -353,6 +352,8 @@ object UserPermis: TUserPermis
         6FCE726FCE726FCE726FFF00FF9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A
         9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = BtGravaClick
     end
     object BtCancel: TBitBtn
       Left = 8
@@ -360,8 +361,6 @@ object UserPermis: TUserPermis
       Width = 82
       Height = 25
       Caption = '&Cancelar'
-      TabOrder = 3
-      OnClick = BtCancelClick
       Glyph.Data = {
         66030000424D6603000000000000660200002800000010000000100000000100
         08000000000000010000120B0000120B00008C0000008C00000000000000FFFF
@@ -391,6 +390,8 @@ object UserPermis: TUserPermis
         14212E44757D69577902024D0D08011218241F3253016140790202024D0A0C01
         0E1C2A390156787902020202024D4D1A1B2735334C797902020202020202024D
         4D4D4D4D4D0202020202}
+      TabOrder = 3
+      OnClick = BtCancelClick
     end
     object GroupBox1: TGroupBox
       Left = 8
@@ -423,8 +424,8 @@ object UserPermis: TUserPermis
   object PC: TPageControl
     Left = 0
     Top = 35
-    Width = 488
-    Height = 491
+    Width = 480
+    Height = 486
     ActivePage = PageMenu
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -436,13 +437,15 @@ object UserPermis: TUserPermis
     ParentFont = False
     TabOrder = 2
     TabWidth = 155
+    ExplicitWidth = 488
+    ExplicitHeight = 491
     object PageMenu: TTabSheet
       Caption = 'Menu Controle de Usuarios'
       object TreeMenu: TTreeView
         Left = 0
         Top = 0
-        Width = 480
-        Height = 463
+        Width = 472
+        Height = 458
         Align = alClient
         Ctl3D = True
         Images = ImageList1
@@ -455,6 +458,8 @@ object UserPermis: TUserPermis
         OnClick = TreeMenuClick
         OnKeyPress = TreeMenuKeyPress
         OnMouseUp = TreeMenuMouseUp
+        ExplicitWidth = 480
+        ExplicitHeight = 463
       end
     end
     object PageAction: TTabSheet
@@ -463,8 +468,8 @@ object UserPermis: TUserPermis
       object TreeAction: TTreeView
         Left = 0
         Top = 0
-        Width = 480
-        Height = 463
+        Width = 472
+        Height = 458
         Align = alClient
         Ctl3D = True
         Images = ImageList1
@@ -476,6 +481,8 @@ object UserPermis: TUserPermis
         TabOrder = 0
         OnClick = TreeActionClick
         OnKeyPress = TreeMenuKeyPress
+        ExplicitWidth = 480
+        ExplicitHeight = 463
       end
     end
     object PageControls: TTabSheet
@@ -484,8 +491,8 @@ object UserPermis: TUserPermis
       object TreeControls: TTreeView
         Left = 0
         Top = 0
-        Width = 480
-        Height = 463
+        Width = 472
+        Height = 458
         Align = alClient
         Ctl3D = True
         Images = ImageList1
@@ -497,6 +504,8 @@ object UserPermis: TUserPermis
         TabOrder = 0
         OnClick = TreeControlsClick
         OnKeyPress = TreeMenuKeyPress
+        ExplicitWidth = 480
+        ExplicitHeight = 463
       end
     end
   end
@@ -504,7 +513,7 @@ object UserPermis: TUserPermis
     Left = 336
     Top = 144
     Bitmap = {
-      494C010103000500740010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010103000500040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

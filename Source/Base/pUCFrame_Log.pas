@@ -88,7 +88,6 @@ uses
   Forms,
   Graphics,
   Messages,
-  Spin,
   StdCtrls,
   SysUtils,
   {$IFDEF FPC}
@@ -101,12 +100,12 @@ uses
 
   UCBase,
 
-  // Delphi XE 8 ou superior
-  {$IFDEF DELPHI22_UP}
-      System.ImageList,
-  {$ENDIF}
+//  // Delphi XE 8 ou superior
+//  {$IFDEF DELPHI22_UP}
+//      System.ImageList,
+//  {$ENDIF}
 
-  ImgList, Grids;
+  ImgList, Grids, System.ImageList;
 
 type
   TUCFrame_Log = class(TFrame)

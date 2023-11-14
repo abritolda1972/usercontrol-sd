@@ -81,10 +81,7 @@ uses
   Controls,
   ExtCtrls,
   Forms,
-  {$IFNDEF FPC}
-  jpeg,
-  {$ENDIF}
-  StdCtrls;
+  StdCtrls, Vcl.Imaging.jpeg;
 
 type
   TUCAboutForm = class(TForm)
